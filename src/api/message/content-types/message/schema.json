@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages",
+  "info": {
+    "singularName": "message",
+    "pluralName": "messages",
+    "displayName": "Message",
+    "description": "Chat messages between users"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "timestamp": {
+      "type": "datetime"
+    },
+    "sender": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "recipient": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
