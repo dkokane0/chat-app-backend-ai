@@ -23,6 +23,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "DELETE",
+      "path": "/messages/:id",
+      "handler": "message.delete",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
